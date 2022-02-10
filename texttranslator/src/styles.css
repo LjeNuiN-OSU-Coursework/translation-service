@@ -1,0 +1,211 @@
+body {
+  background-color: #123511;
+}
+
+.outerContainer {
+  color: black;
+  text-align: center;
+  background-color: #10d398;
+  border-radius: 25px;
+  -webkit-box-shadow: 10px 5px 1000px;
+          box-shadow: 10px 5px 1000px;
+  padding: 6rem;
+  margin-top: 100px;
+  -ms-flex-item-align: flex;
+      -ms-grid-row-align: flex;
+      align-self: flex;
+}
+
+.innerContainer {
+  color: #0b19dd;
+  text-align: center;
+  background-color: #3bf8bf;
+  padding: 6rem;
+  border-radius: 25px;
+  -webkit-box-shadow: 10px 5px 100px;
+          box-shadow: 10px 5px 100px;
+}
+
+.innerContainer img {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+}
+
+.innerContainer img:hover {
+  -webkit-transform: scaleX(1.02);
+          transform: scaleX(1.02);
+}
+
+.dropSelect {
+  text-shadow: seashell;
+  color: white;
+}
+
+.dropSelect select {
+  background-color: #5abafa;
+  color: white;
+  padding: 2px;
+  border-radius: 25px;
+  margin-bottom: 2px;
+}
+
+.dropSelect textarea {
+  background-color: #5abafa;
+  color: white;
+  height: 25px;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #333;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+.buttons {
+  margin-top: 50px;
+  text-align: center;
+  border-radius: px;
+}
+
+.blob-btn {
+  z-index: 1;
+  position: relative;
+  padding: 20px 46px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #0505A9;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.blob-btn:before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #0505A9;
+  border-radius: 30px;
+}
+
+.blob-btn:after {
+  content: "";
+  z-index: -2;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.3s 0.2s;
+  transition: all 0.3s 0.2s;
+  border-radius: 30px;
+}
+
+.blob-btn:hover {
+  color: #FFFFFF;
+  border-radius: 30px;
+}
+
+.blob-btn:hover:after {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  left: 0;
+  top: 0;
+  border-radius: 30px;
+}
+
+.blob-btn__inner {
+  z-index: -1;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background: #ffffff;
+}
+
+.blob-btn__blobs {
+  position: relative;
+  display: block;
+  height: 100%;
+  -webkit-filter: url("#goo");
+          filter: url("#goo");
+}
+
+.blob-btn__blob {
+  position: absolute;
+  top: 2px;
+  width: 25%;
+  height: 100%;
+  background: #0505A9;
+  border-radius: 100%;
+  -webkit-transform: translate3d(0, 150%, 0) scale(1.7);
+          transform: translate3d(0, 150%, 0) scale(1.7);
+  -webkit-transition: -webkit-transform 0.45s;
+  transition: -webkit-transform 0.45s;
+  transition: transform 0.45s;
+  transition: transform 0.45s, -webkit-transform 0.45s;
+}
+
+@supports ((-webkit-filter: url("#goo")) or (filter: url("#goo"))) {
+  .blob-btn__blob {
+    -webkit-transform: translate3d(0, 150%, 0) scale(1.4);
+            transform: translate3d(0, 150%, 0) scale(1.4);
+  }
+}
+
+.blob-btn__blob:nth-child(1) {
+  left: 0%;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.blob-btn__blob:nth-child(2) {
+  left: 30%;
+  -webkit-transition-delay: 0.08s;
+          transition-delay: 0.08s;
+}
+
+.blob-btn__blob:nth-child(3) {
+  left: 60%;
+  -webkit-transition-delay: 0.16s;
+          transition-delay: 0.16s;
+}
+
+.blob-btn__blob:nth-child(4) {
+  left: 90%;
+  -webkit-transition-delay: 0.24s;
+          transition-delay: 0.24s;
+}
+
+.blob-btn:hover .blob-btn__blob {
+  -webkit-transform: translateZ(0) scale(1.7);
+          transform: translateZ(0) scale(1.7);
+}
+
+@supports ((-webkit-filter: url("#goo")) or (filter: url("#goo"))) {
+  .blob-btn:hover .blob-btn__blob {
+    -webkit-transform: translateZ(0) scale(1.4);
+            transform: translateZ(0) scale(1.4);
+  }
+}
+/*# sourceMappingURL=styles.css.map */
