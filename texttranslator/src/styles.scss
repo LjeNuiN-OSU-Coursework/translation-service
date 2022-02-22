@@ -64,40 +64,95 @@
 
 
 
-
+$app-blue:rgb(11, 25, 221);
+$app-green:rgb(59, 248, 191);
 
 
 
 
 body {
-    background-color: grey;
+    background-color: rgb(90, 85, 85);
+    
+    .outerContainer{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 50%;
 
+    }
     .innerImg {
         width: 250px;
         height: 250px;
         background-size: cover !important;
         border-radius: 150px;
+        
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+
+        
     }
 
     .innerContainer {
-      color:rgb(11, 25, 221);
+      color:$app-blue;
           text-align: center;
-          background-color: rgb(59, 248, 191);
+          background-color: $app-green;
           padding: 6rem;
           border-radius: 25px;
           box-shadow:10px 5px 100px;
 
-        // text-align: center;
-        // display: flex;
-        // flex-direction: column;
-        // align-items: center;
-        // background-color: rgb(114, 114, 114);
-    }
+          select{
+            background-color:$app-blue;
+            color:rgb(255, 255, 255);
+            padding: 2px;
+            border-radius: 25px;
+            margin-bottom: 2px;
+        }
+        textarea{
+            background-color:$app-blue;
+            color:rgb(252, 16, 16); 
+            font-weight: bold;
+            border-radius: 5px; 
+        }
 
+        button{
+            color: white;
+            background-color: $app-blue;
+            border-radius: 25px;
+            padding: 1rem 1rem
+        }
+        button:hover{
+            background-color: black;
+            color: $app-green;
+        
+        }
+        
+    };
+
+    .textField{
+        margin-left: auto;
+        margin-right: auto;
     .output {
-        background-color: white;
-        padding: 1rem 1rem;
+        background-color: $app-blue;
+        color:white;
         text-align: left;
+        border-radius: 5px;
+        
+    }
+    .input{
+        
+        textarea{
+            background-color: rgb(11, 25, 221);
+            color: white;
+            border-radius: 5px;
+           
+        }
+        
     }
 }
+
+}
+
 
