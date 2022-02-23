@@ -5,7 +5,7 @@ Clone repo then
 * send a POST request to PORT/translate
 
 
-* you can refer to the 'test.http' file to see what the request needs to look like
+* you can refer to the `test.http` file to see what the request needs to look like
 
 
 
