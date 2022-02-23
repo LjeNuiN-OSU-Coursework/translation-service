@@ -9,26 +9,29 @@ const PORT = 4500;		// default port is set to 4500 but you can change this
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`)
 );
 
-// IMPORTANT: put your google geocode api key here otherwise the requests will not work
-
-
 // given some text responds witht he text translated
 // simply send a POST request with text to translate in the body.
 app.post("/translate", async (req, res) => {
 	try {
-		const translate = req.body.translate;
+		const translateText = req.body.text;
+		// console.log(translateText)
+		
 
 		// send request to libre translate api
-		const { data } = await axios.get(
-			`"https://libretranslate.de/translate"`
+		const translateResponse = await axios.post(
+			"https://libretranslate.de/translate", {
+				q: translateText,
+				source: "en",
+				target: "es",
+				format: "text"
+			}
 		);
-
-		// if the response status is OK return the translated text
-		if (data.status === 'OK') {
-			translatedOutput = data.translatedText;
-			return res.status(200).json({ translatedOutput });
+		console.log(translateResponse.status)
+		console.log(translateResponse.data)
+		if (translateResponse.status === 200) {
+			res.status(200).json({translated: translateResponse.data.translatedText})
 		} else {
-			return res.status(400).json({ message: "there was a problem when trying to translate your text" })
+			res.sstatus(400).json({message: "there was a problem when tryign to request information from the translator API."})
 		}
 	} catch (error) {
 		console.error(error);
