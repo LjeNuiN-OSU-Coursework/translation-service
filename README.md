@@ -5,12 +5,12 @@ Clone repo then
 * send a POST request to PORT/translate
 
 
+* you can refer to the 'test.http' file to see what the request needs to look like
 
 
 
 
-# Checking out my app
-* Clone repo then do `cd texttranslator`
-* `npm run` on terminal
-* go to localhost:3000 on web browser
+
+
+
 
